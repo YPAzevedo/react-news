@@ -66,15 +66,11 @@ export default function Posts({ posts }: PostProps) {
           {posts.map((post) => (
             <Link key={post.slug} href="#" passHref>
               <a className={styles.title}>
-                <time>September 12, 2021</time>
-                <strong>Lorem Ipsum</strong>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry`s
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book
-                </p>
+                <time>{post.updatedAt}</time>
+
+                <strong>{post.title}</strong>
+
+                <p>{post.excerpt}</p>
               </a>
             </Link>
           ))}
