@@ -1,0 +1,31 @@
+.button {
+  height: 3rem;
+  border-radius: 3rem;
+  border: 0;
+  padding: 1.5rem;
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--gray-850);
+  color: var(--white);
+
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+
+  svg:first-child {
+    margin-right: 1rem;
+  }
+
+  transition: all 0.2s;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.closeIcon {
+  margin-left: 1rem;
+}

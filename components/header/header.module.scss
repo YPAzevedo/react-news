@@ -1,0 +1,60 @@
+.container {
+  height: 5rem;
+  border-bottom: 1px solid var(--gray-800);
+  width: 100%;
+}
+
+.content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+
+  & button {
+    margin-left: auto;
+  }
+
+  & nav {
+    margin-left: 5rem;
+    height: 5rem;
+
+    & a {
+      display: inline-block;
+      padding: 0 0.5rem;
+      position: relative;
+      height: 5rem;
+      line-height: 5rem;
+
+      transition: color 0.2s;
+
+      color: var(--gray-500);
+
+      & + a {
+        margin-left: 2rem;
+      }
+
+      &:hover {
+        color: var(--white);
+      }
+
+      &.active {
+        font-weight: bold;
+        color: var(--white);
+      }
+
+      &.active::after {
+        content: " ";
+        height: 3px;
+        border-radius: 3px 3px 0 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--yellow-500);
+      }
+    }
+  }
+}
