@@ -1,6 +1,5 @@
 import { signIn, useSession } from 'next-auth/client';
 import { api } from '../../services/api';
-import { stripe } from '../../services/stripe';
 import { getStripeClient } from '../../services/stripe.client';
 import styles from './subscribebutton.module.scss';
 
@@ -10,10 +9,10 @@ type SubscribebuttonProps = {
 
 export function SubscribeButton({ priceId }: SubscribebuttonProps) {
   const [session] = useSession();
+
   async function handleSubscribe() {
     if (!session) {
-      signIn('github');
-      return;
+      return signIn('github');
     }
 
     try {
